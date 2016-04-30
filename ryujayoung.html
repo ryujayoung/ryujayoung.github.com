@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ryu Jayoung</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+   body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;
+  }
+   h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;      
+      font-size: 20px;
+      color: #111;
+  }
+  .container {
+      padding: 80px 120px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.9;
+  }
+  .person:hover {
+      border-color: #e6e6e6;
+  }
+   .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  div.bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  div.bg-1 h3 {color: #fff;}
+  div.bg-1 p {font-style: italic;}
+  div.bg-2 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }  
+  
+  .nav-tabs li a {
+      color: #777;
+  }
+  
+  .navbar {
+   	  font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red !important;
+  }
+   footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 32px;
+  }
+  footer a {
+      color: #f5f5f5;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  }
+  .form-control {
+      border-radius: 0;
+  }
+   textarea {
+      resize: none;
+  } 
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Ryu Jayoung</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#Biography">BIOGRAPHY</a></li>
+        <li><a href="#Family">FAMILY</a></li>
+        <li><a href="#Travel">TRAVEL</a></li>
+        <li><a href="#Hobby">HOBBY</a></li>
+        <li><a href="#Foods">FOODS</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="it's me.jpg" alt="it's me" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>IT'S ME</h3>
+          <p>I take this picture in the university roof.</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="busan.jpg" alt="busan" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Busan</h3>
+          <p>Thank you, Busan - A night I won't forget.</p>
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="pizza.jpg" alt="pizza" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Foods</h3>
+          <p>I love eating delicious food. Pizza is one of them.</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="soccer.jpg" alt="soccer" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Soccer</h3>
+          <p>I love watching a soccer game. I'm member of soccer team in GeumGang University.</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="boryeong.jpg" alt="Boryeong" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Boryeong</h3>
+          <p>Thank you, Boryeong - A nice view I won't forger.</p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div id="Biography" class="container text-center">
+  <h3>Ryu Jayoung</h3>
+  <h4><em>Welcome! This is my webpage.</em></h1>
+  	<p>My name is Ryu Jayoung. My English name is Sally. I am in my second year of GeumGang University. My major is Public Adminstration. I am 21 years. I have five members in my family. My grandmother, my parents, younger sister and me. Also, I have two dogs. Their name is 사랑, 밤톨. My hobby is listening to music, painting a picture, and traveling eveywhere and watching a soccer game. Eating delicious food that is important thing in my life. First, I will introduce my family.
+</div>
+
+<div id="Family" class="container text-center">
+  	<h3>Family</h3>
+	<br>
+  	 <div class="row">
+    	<div class="col-sm-4">
+     	 	<p class="text-center"><strong>My grandmother</strong></p><br>
+     	 	<a href="#demo" data-toggle="collapse">
+      			<img src="grandmother.png" class="img-circle person" alt="Random grandmother" width="255" height="255">
+      	    </a>
+      		<div id="demo" class="collapse">
+        		<p>She has gentle smile.</p>
+       			<p>she always makes delicious food for me.</p>
+       		</div>
+    	</div>
+    	<div class="col-sm-4">
+      		<p class="text-center"><strong>My father</strong></p><br>
+      		<a href="#demo2" data-toggle="collapse">
+      			<img src="father.png" class="img-circle person" alt="Random father" width="255" height="255">
+      		</a>
+      		<div id="demo2" class="collapse">
+        		<p>He is very humerous man.</p>
+       			<p>he makes me happy.</p>
+       		</div>
+    	</div>
+    	<div class="col-sm-4">
+    	  	<p class="text-center"><strong>My mother</strong></p><br>
+    	  	<a href="#demo3" data-toggle="collapse">
+     			<img src="mother.png" class="img-circle person" alt="Random mother" idth="255" height="255">
+     		</a>
+     		<div id="demo3" class="collapse">
+        		<p>She always concerns about me.</p>
+       			<p>she is good at making fancy thing.</p>
+       		</div>
+    	</div>
+     </div>
+    <br>
+    <div class="row">
+    	<div class="col-sm-4">
+     	 	<p class="text-center"><strong>Me</strong></p><br>
+     	 	<a href="#demo4" data-toggle="collapse">
+      			<img src="me.png" class="img-circle person" alt="Random me" width="255" height="255">
+      		</a>
+      		<div id="demo4" class="collapse">
+        		<p>I like eating foods.</p>
+       			<p>I love painting a picture.</p>
+       		</div>
+    	</div>
+    	<div class="col-sm-4">
+      		<p class="text-center"><strong>Younger sister</strong></p><br>
+      		<a href="#demo5" data-toggle="collapse">
+      			<img src="sister.png" class="img-circle person" alt="Random sister" width="255" height="255">
+      		</a>
+      		<div id="demo5" class="collapse">
+        		<p>She is my dear little devil.</p>
+       			<p>she is good at speaking English.</p>
+       		</div>
+    	</div>
+    	<div class="col-sm-4">
+    	  	<p class="text-center"><strong>Dogs</strong></p><br>
+    	  	<a href="#demo6" data-toggle="collapse">
+     			<img src="dog.png" class="img-circle person" alt="Random dogs" width="255" height="255">
+     		</a>
+     		<div id="demo6" class="collapse">
+        		<p>They are cute.</p>
+       			<p>They eat very well.</p>
+       		</div>
+    	</div>
+    </div>
+</div>
+
+<!-- Container (TRAVEL Section) -->
+ <div id="Travel" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">TRAVEL</h3>
+    <p class="text-center">Travel makes me wiser and stirs up imagination.<br> Introduce good place to travel!</p>
+    <ul class="list-group">
+      <li class="list-group-item">August, 2015 <span class="label label-danger">Night watch!</span></li>
+      <li class="list-group-item">November, 2015 <span class="label label-danger">Modern&Attic!</span></li> 
+      <li class="list-group-item">May, 2015 <span class="label label-danger">Nice view!</span></li> 
+    </ul>
+
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="busan1.jpg" alt="Busan" width="400" height="300">
+          <p><strong>Busan</strong></p>
+          <p>17 August, 2015</p>
+          <button class="btn"><a href="https://www.google.co.kr/search?q=%EB%B6%80%EC%82%B0+%EC%95%BC%EA%B2%BD&biw=1366&bih=623&tbm=isch&tbo=u&source=univ&sa=X&ved=0ahUKEwin5Zyp4rbMAhUHhqYKHcVHDm0QsAQIHw">Night Watch</a></button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="seoul.jpg" alt="Seoul" width="400" height="300">
+          <p><strong>Seoul</strong></p>
+          <p>29 November 2015</p>
+          <button class="btn"><a href="https://www.google.co.kr/search?q=Seoul+Modern&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjt_Pms47bMAhVCmpQKHTYzCHMQ_AUIBygB&biw=1366&bih=623">Modern&Attic</a></button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="boryeong.png" alt="Boryeong" width="400" height="300">
+          <p><strong>Boryeong</strong></p>
+          <p>23 May 2015</p>
+          <button class="btn"><a href="https://www.google.co.kr/search?q=%EB%8C%80%EC%B2%9C%EB%B0%94%EB%8B%A4&tbm=isch&tbo=u&source=univ&sa=X&ved=0ahUKEwjz3Kmh47bMAhUJHpQKHTr1CaYQsAQIIA&biw=1366&bih=623">Nice View</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Hobby Section) -->
+ <div id="Hobby" class="bg-2">
+  <div class="container">
+    <h3 class="text-center">HOBBY</h3>
+    <p class="text-center">Hobby makes me peaceful. And, it grows me up.<br> Introduce my favorite hobby!</p>
+    <ul class="list-group">
+      <li class="list-group-item">Watching a soccer game<span class="label label-danger">Thrilling!</span></li>
+      <li class="list-group-item">Painting a picture <span class="label label-danger">Peaceful!</span></li> 
+      <li class="list-group-item">Visiting to an exhibition <span class="label label-danger">Imagination!</span></li> 
+    </ul>
+
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="soccer2.png" alt="soccer" width="400" height="300">
+          <p><strong>Soccer Game</strong></p>
+          <p>17 March 2016</p>
+          <button class="btn"><a href="https://www.facebook.com/%EA%BE%B8%EC%8A%9B%EB%8F%8C%EC%9D%B4-1495856707292637/?fref=ts">More Photo</a></button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="painting.png" alt="painting" width="400" height="300">
+          <p><strong>Painting</strong></p>
+          <p>23 August 2015</p>
+          <button class="btn"><a href="https://ko.wikipedia.org/wiki/%ED%9A%8C%ED%99%94">About painting</a></button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="visiting.png" alt="visiting" width="400" height="300">
+          <p><strong>Exhibition</strong></p>
+          <p>31 October 2015</p>
+          <button class="btn"><a href="http://dmma.daejeon.go.kr/GetExhibitionsUsrView.do?fretype=1">This Exhibition</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Foods Section) -->
+<div id="Foods" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">FOODS</h3>
+    <p class="text-center">I love eating delicious foods. Especially Korean foods, Pizza<br> Introduce Korean foods and pizza!</p>
+    <ul class="list-group">
+      <li class="list-group-item">Japchae <span class="label label-danger">Noodle!</span></li>
+      <li class="list-group-item">Kimchi <span class="label label-danger">Spicy!</span></li> 
+      <li class="list-group-item">Pizza <span class="label label-danger">Cheese!</span></li> 
+    </ul>
+
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="japchae.png" alt="Japchae" width="400" height="300">
+          <p><strong>Japchae</strong></p>
+          <p>Stir-fried Glass Noodles and Vegetables</p>
+          <button class="btn"><a href="http://m.post.naver.com/viewer/postView.nhn?volumeNo=3162461&memberNo=523408&searchKeyword=%EC%9E%A1%EC%B1%84&searchRank=3">Recipe</a></button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="kimchi.png" alt="Kimchi" width="400" height="300">
+          <p><strong>Kimchi</strong></p>
+          <p>A traditional fermented Korean side dish</p>
+          <button class="btn"><a href="http://m.post.naver.com/viewer/postView.nhn?volumeNo=2830114&memberNo=1121076&searchKeyword=%EB%B0%B0%EC%B6%94%EA%B9%80%EC%B9%98&searchRank=5">Recipe</a></button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="pizza1.png" alt="Pizza" width="400" height="300">
+          <p><strong>Pizza</strong></p>
+          <p>It is the best pizza in my life</p>
+          <button class="btn"><a href="https://www.instagram.com/italyguksi/">Location</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Container (Contact Section) -->
+<div class="container">
+  <h3 class="text-center">Contact</h3>
+  <p class="text-center"><em>I want to contact you guys!</em></p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <p>Contact? Drop a note.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>Nonsan, South Korea</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +82 1099594178</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: fbwkdud96@hanmail.net</p>
+      <p><span class="glyphicon glyphicon-camera"></span><a href="https://www.instagram.com/jamong731/">Instagram</a></p>
+      <p><span class="glyphicon glyphicon-thumbs-up"></span><a href="https://www.facebook.com/profile.php?id=100003498447070">Facebook</a></p>
+
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+      	<form action="MAILTO:someone@example.com" method="post" enctype="text/plain">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div>	
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>This Webpage Made By <a href="http://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">Ryu Jayoung</a></p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+   
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  });
+})
+</script>
+</body>
+</html>
